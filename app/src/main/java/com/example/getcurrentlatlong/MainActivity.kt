@@ -5,17 +5,19 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.getcurrentlatlong.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+//===============JUST Change "this" with "requireContext() or requireActivity()" for fragment and activity respectively
+//Then Same code can be used for fragments also
 class MainActivity : AppCompatActivity() {
     private var fusedLocationClient: FusedLocationProviderClient? = null
     private var lastLocation: Location? = null
